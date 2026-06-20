@@ -893,3 +893,56 @@ p {
     font-size: 2rem;
   }
 }
+
+/* Lightbox Navigation Buttons */
+#lightbox-prev, #lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  font-size: 2.5rem;
+  font-weight: 300;
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  line-height: 1;
+  transition: all 0.2s ease;
+  user-select: none;
+  z-index: 1010;
+}
+
+#lightbox-prev {
+  left: 24px;
+}
+
+#lightbox-next {
+  right: 24px;
+}
+
+#lightbox-prev:hover, #lightbox-next:hover {
+  color: var(--accent-hover);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent-hover);
+  transform: translateY(-50%) scale(1.05);
+}
+
+@media (max-width: 768px) {
+  #lightbox-prev, #lightbox-next {
+    width: 44px;
+    height: 44px;
+    font-size: 1.8rem;
+  }
+  #lightbox-prev {
+    left: 12px;
+  }
+  #lightbox-next {
+    right: 12px;
+  }
+}
+
